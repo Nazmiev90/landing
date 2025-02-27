@@ -703,7 +703,6 @@ nav {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 60px;
 }
 
@@ -997,5 +996,134 @@ footer {
     .contact-form,
     .contact-info {
         padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .equipment-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item:nth-child(1) {
+        grid-column: auto;
+        grid-row: auto;
+        height: 250px;
+    }
+
+    .gallery-item:nth-child(2),
+    .gallery-item:nth-child(3) {
+        height: 250px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+    }
+
+    .subscribe {
+        flex-direction: column;
+    }
+
+    .subscribe-input {
+        margin-bottom: 15px;
+    }
+
+    .subscribe-btn {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .contact-form,
+    .contact-info {
+        padding: 15px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .about-text h2,
+    .equipment-content h2 {
+        font-size: 2rem;
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 2.5rem;
     }
 }
